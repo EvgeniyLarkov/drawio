@@ -3124,6 +3124,24 @@
 
 	mxCellRenderer.registerShape('xor', XorShape);
 
+	// Mirrored And
+	function MirroredOrShape()
+	{
+		mxActor.call(this);
+	};
+	mxUtils.extend(MirroredOrShape, mxActor);
+	MirroredOrShape.prototype.redrawPath = function(c, x, y, w, h)
+	{
+		c.moveTo(w, 0);
+		c.moveTo(w, h);
+		c.quadTo(0, h, 0, h / 2);
+		c.quadTo(0, 0, w, 0);
+		c.close();
+		c.end();
+	};
+
+	mxCellRenderer.registerShape('mirroredOr', MirroredOrShape);
+
 	// Loop limit
 	function LoopLimitShape()
 	{
