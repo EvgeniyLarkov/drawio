@@ -1,11 +1,11 @@
-##Install
+Install
 ----
 В папке ```
 /src/main/webapp/ ``` вызвать 
 ````
     npm install
 ````
-##Run project
+Run project
 ----
 В папке ```
 /src/main/webapp/ ``` вызвать
